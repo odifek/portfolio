@@ -1,0 +1,195 @@
+@import 'variables';
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+html {
+    font-size: $default-font-size;
+    font-family: $font-family-stack;
+    color: $color-default;
+}
+
+a {
+    text-decoration: none;
+    color: $color-secondary-dark;
+}
+
+hr {
+    width: 90%;
+}
+
+// The default is mobile first
+.navbar {
+    box-sizing: border-box;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    flex-flow: row wrap;
+//    padding: $padding-nav;
+//    justify-content: space-between;
+    
+    background-color: $color-primary-dark;
+    * {color: $color-primary-light;}
+    text-transform: uppercase;
+    
+}
+
+// Collapse items by default
+.nav-items {
+//	display: none;
+}
+
+
+
+%nav-item--deco {
+    &:hover {
+        background-color: $color-primary-light;
+        
+        color: $color-primary-dark;
+
+    }
+    &:active {
+        border-bottom: 3px solid $color-secondary;
+    }
+    &:focus {
+        background-color: $color-secondary;
+    }
+    
+}
+
+.navbar-brand,
+.navicon{
+	flex: 1 1 50%;
+    padding: $padding-nav-item;
+}
+.navicon {
+    text-align: right;
+    i {cursor: pointer;}
+}
+
+.nav-items{
+	display: flex;
+    flex-flow: column;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.nav-item {
+    @extend %nav-item--deco;
+    flex: 1 1 100%;
+    padding: $padding-nav-item;
+    
+}
+// Checkbox is connenected to navicon. 
+.toggle-menu--checkbox {
+    display: none;
+}
+.toggle-menu--checkbox:checked ~ .nav-items{
+    display: none;
+}
+
+.main {
+	max-width: 90%;
+    margin: 0 auto;
+    padding-top: 70px;
+}
+.about {
+	display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.about-detail {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+}
+
+.portfolio {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.portfolio-items {
+    display: flex;
+    flex-flow: column;
+}
+
+.portfolio-item {
+    width: 100%;
+    padding: $padding-image;
+}
+
+.contact {
+    width: 100%;
+	display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.contact-form {
+    flex: 1 1 100%;
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    *:not(button){
+        padding: 10px 0;
+        margin-bottom: 10px;
+        border: 0;
+        border-bottom: 1px solid fade-out($color-secondary-dark, .5);
+        flex: 1 1 100%;
+    }
+    button {width: 100px; line-height: 2rem;}
+}
+.contact-policy {
+    flex: 1 1 100%;
+    padding: 10px;
+}
+// For medium and large devices, display nav items on same row
+@media screen and (min-width: 640px) {
+    .navicon {
+	    display: none;
+    }
+
+    .toggle-menu--checkbox:checked ~ .nav-items {
+        display: flex;
+    }
+    .nav-items {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row;
+        .nav-item {
+            text-align: center;
+        }
+        
+    }
+    
+    .about {
+	    display: flex;
+        flex-flow: row;
+    }
+    
+    .about-detail {
+	    flex: 2 1 70%;
+    }
+    
+    .profile-pic {
+	    flex: 1 1 30%;
+        padding: 10px;
+    }
+    
+    .portfolio-items {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    
+    .portfolio-item {
+	    max-width: 500px;
+        flex: 1 1 50%;
+    }    
+   
+}
+@import 'utility';
+@import 'grid';
+@import 'skin';

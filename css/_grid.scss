@@ -1,0 +1,31 @@
+$number-of-cols: 12;
+$grid-container-name: container;
+$grid-row-name: row;
+$grid-medium-breakpoint: 640px;
+$grid-column-padding: 0 5px;
+
+.#{$grid-container-name} {
+    margin: 0 auto;
+}
+
+.#{$grid-row-name} {
+    display: flex;
+    flex: 0 1 auto;
+    flex-flow: row wrap;
+}
+@for $i from 1 through $number-of-cols {
+    .col-#{$i} {
+        max-width: 100%;
+        flex: 1 1 100%;
+        padding: $grid-column-padding;
+    }
+}
+
+@media screen and (min-width: $grid-medium-breakpoint){
+    @for $i from 1 through $number-of-cols {
+        .col-#{$i} {
+            max-width: #{($i / $number-of-cols * 100%)};
+            flex: 1 1 #{($i / $number-of-cols * 100%)};
+        }
+    }
+}

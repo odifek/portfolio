@@ -1,0 +1,347 @@
+/* line 2, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+*, *:after, *:before {
+  box-sizing: border-box; }
+
+/* line 5, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+html {
+  font-size: 16px;
+  font-family: system-ui, Lato, Ubuntu, sans-serif;
+  color: #555; }
+
+/* line 11, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+a {
+  text-decoration: none;
+  color: #075665; }
+
+/* line 16, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+hr {
+  width: 90%; }
+
+/* line 21, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+.navbar {
+  box-sizing: border-box;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  flex-flow: row wrap;
+  background-color: #022340;
+  text-transform: uppercase; }
+  /* line 31, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+  .navbar * {
+    color: #EFFCFD; }
+
+/* line 44, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+.nav-item:hover {
+  background-color: #EFFCFD;
+  color: #022340; }
+
+/* line 50, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+.nav-item:active {
+  border-bottom: 3px solid #0B9393; }
+
+/* line 53, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+.nav-item:focus {
+  background-color: #0B9393; }
+
+/* line 59, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+.navbar-brand,
+.navicon {
+  flex: 1 1 50%;
+  padding: 10px; }
+
+/* line 64, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+.navicon {
+  text-align: right; }
+  /* line 66, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+  .navicon i {
+    cursor: pointer; }
+
+/* line 69, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+.nav-items {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  justify-content: space-around; }
+
+/* line 76, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+.nav-item {
+  flex: 1 1 100%;
+  padding: 10px; }
+
+/* line 83, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+.toggle-menu--checkbox {
+  display: none; }
+
+/* line 86, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+.toggle-menu--checkbox:checked ~ .nav-items {
+  display: none; }
+
+/* line 90, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+.main {
+  max-width: 90%;
+  margin: 0 auto;
+  padding-top: 70px; }
+
+/* line 95, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+.about {
+  display: flex;
+  flex-flow: column;
+  align-items: center; }
+
+/* line 100, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+.about-detail {
+  display: flex;
+  flex-flow: column;
+  text-align: center; }
+
+/* line 106, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+.portfolio {
+  display: flex;
+  flex-flow: column;
+  align-items: center; }
+
+/* line 112, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+.portfolio-items {
+  display: flex;
+  flex-flow: column; }
+
+/* line 117, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+.portfolio-item {
+  width: 100%;
+  padding: 10px 10px; }
+
+/* line 122, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+.contact {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between; }
+
+/* line 129, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+.contact-form {
+  flex: 1 1 100%;
+  padding: 10px;
+  display: flex;
+  flex-flow: row wrap; }
+  /* line 134, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+  .contact-form *:not(button) {
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border: 0;
+    border-bottom: 1px solid rgba(7, 86, 101, 0.5);
+    flex: 1 1 100%; }
+  /* line 141, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+  .contact-form button {
+    width: 100px;
+    line-height: 2rem; }
+
+/* line 143, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+.contact-policy {
+  flex: 1 1 100%;
+  padding: 10px; }
+
+@media screen and (min-width: 640px) {
+  /* line 149, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+  .navicon {
+    display: none; }
+  /* line 153, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+  .toggle-menu--checkbox:checked ~ .nav-items {
+    display: flex; }
+  /* line 156, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+  .nav-items {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row; }
+    /* line 161, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+    .nav-items .nav-item {
+      text-align: center; }
+  /* line 167, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+  .about {
+    display: flex;
+    flex-flow: row; }
+  /* line 172, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+  .about-detail {
+    flex: 2 1 70%; }
+  /* line 176, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+  .profile-pic {
+    flex: 1 1 30%;
+    padding: 10px; }
+  /* line 181, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+  .portfolio-items {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center; }
+  /* line 187, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/style.scss */
+  .portfolio-item {
+    max-width: 500px;
+    flex: 1 1 50%; } }
+
+/* line 2, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_utility.scss */
+.circle, .circle.border {
+  border-radius: 50%; }
+
+/* line 6, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_utility.scss */
+.text-uppercase {
+  text-transform: uppercase; }
+
+/* line 10, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_utility.scss */
+.centered {
+  text-align: center; }
+
+/* line 14, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_utility.scss */
+.border.circle {
+  border: 1px solid #EFFCFD; }
+
+/* line 20, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_utility.scss */
+.flex-col {
+  display: flex;
+  flex-flow: column; }
+
+/* line 24, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_utility.scss */
+.flex-col.centered {
+  align-items: center; }
+
+/* line 7, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_grid.scss */
+.container {
+  margin: 0 auto; }
+
+/* line 11, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_grid.scss */
+.row {
+  display: flex;
+  flex: 0 1 auto;
+  flex-flow: row wrap; }
+
+/* line 17, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_grid.scss */
+.col-1 {
+  max-width: 100%;
+  flex: 1 1 100%;
+  padding: 0 5px; }
+
+/* line 17, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_grid.scss */
+.col-2 {
+  max-width: 100%;
+  flex: 1 1 100%;
+  padding: 0 5px; }
+
+/* line 17, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_grid.scss */
+.col-3 {
+  max-width: 100%;
+  flex: 1 1 100%;
+  padding: 0 5px; }
+
+/* line 17, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_grid.scss */
+.col-4 {
+  max-width: 100%;
+  flex: 1 1 100%;
+  padding: 0 5px; }
+
+/* line 17, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_grid.scss */
+.col-5 {
+  max-width: 100%;
+  flex: 1 1 100%;
+  padding: 0 5px; }
+
+/* line 17, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_grid.scss */
+.col-6 {
+  max-width: 100%;
+  flex: 1 1 100%;
+  padding: 0 5px; }
+
+/* line 17, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_grid.scss */
+.col-7 {
+  max-width: 100%;
+  flex: 1 1 100%;
+  padding: 0 5px; }
+
+/* line 17, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_grid.scss */
+.col-8 {
+  max-width: 100%;
+  flex: 1 1 100%;
+  padding: 0 5px; }
+
+/* line 17, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_grid.scss */
+.col-9 {
+  max-width: 100%;
+  flex: 1 1 100%;
+  padding: 0 5px; }
+
+/* line 17, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_grid.scss */
+.col-10 {
+  max-width: 100%;
+  flex: 1 1 100%;
+  padding: 0 5px; }
+
+/* line 17, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_grid.scss */
+.col-11 {
+  max-width: 100%;
+  flex: 1 1 100%;
+  padding: 0 5px; }
+
+/* line 17, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_grid.scss */
+.col-12 {
+  max-width: 100%;
+  flex: 1 1 100%;
+  padding: 0 5px; }
+
+@media screen and (min-width: 640px) {
+  /* line 26, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_grid.scss */
+  .col-1 {
+    max-width: 8.33333%;
+    flex: 1 1 8.33333%; }
+  /* line 26, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_grid.scss */
+  .col-2 {
+    max-width: 16.66667%;
+    flex: 1 1 16.66667%; }
+  /* line 26, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_grid.scss */
+  .col-3 {
+    max-width: 25%;
+    flex: 1 1 25%; }
+  /* line 26, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_grid.scss */
+  .col-4 {
+    max-width: 33.33333%;
+    flex: 1 1 33.33333%; }
+  /* line 26, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_grid.scss */
+  .col-5 {
+    max-width: 41.66667%;
+    flex: 1 1 41.66667%; }
+  /* line 26, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_grid.scss */
+  .col-6 {
+    max-width: 50%;
+    flex: 1 1 50%; }
+  /* line 26, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_grid.scss */
+  .col-7 {
+    max-width: 58.33333%;
+    flex: 1 1 58.33333%; }
+  /* line 26, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_grid.scss */
+  .col-8 {
+    max-width: 66.66667%;
+    flex: 1 1 66.66667%; }
+  /* line 26, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_grid.scss */
+  .col-9 {
+    max-width: 75%;
+    flex: 1 1 75%; }
+  /* line 26, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_grid.scss */
+  .col-10 {
+    max-width: 83.33333%;
+    flex: 1 1 83.33333%; }
+  /* line 26, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_grid.scss */
+  .col-11 {
+    max-width: 91.66667%;
+    flex: 1 1 91.66667%; }
+  /* line 26, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_grid.scss */
+  .col-12 {
+    max-width: 100%;
+    flex: 1 1 100%; } }
+
+/* line 2, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_skin.scss */
+.main {
+  background-image: linear-gradient(to bottom #e4e4e4 #eaeaea); }
+
+/* line 6, /home/kennedy/Documents/FreeCodeCamp.org/portfolio 3/css/_skin.scss */
+.footer {
+  background-color: #022340;
+  color: #EFFCFD;
+  padding: 10px; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,10 @@
+@import 'variables';
+.main {
+	background-image: linear-gradient(to bottom #e4e4e4 #eaeaea);
+}
+
+.footer {
+	background-color: $color-primary-dark;
+    color: $color-primary-light;
+    padding: $padding-nav-item;
+}
